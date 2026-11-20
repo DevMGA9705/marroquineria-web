@@ -1,0 +1,32 @@
+name: Desplegar Web Marroquineria en MateoPc
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Descargar codigo fuente
+        uses: actions/checkout@v4
+
+      - name: Compilar nueva imagen Docker
+        run: |
+          docker build -t web-marroquineria:latest .
+
+      - name: Recrear contenedor en produccion
+        run: |
+          docker stop web_marroquineria || true
+          docker rm web_marroquineria || true
+          docker run -d \
+            --name web_marroquineria \
+            --restart unless-stopped \
+            -p 3005:80 \
+            web-marroquineria:latest
+
+      - name: Limpiar imagenes anteriores sin uso
+        run: |
+          docker image prune -f
