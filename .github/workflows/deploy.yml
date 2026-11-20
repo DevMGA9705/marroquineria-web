@@ -21,6 +21,7 @@ jobs:
         run: |
           docker stop web_marroquineria || true
           docker rm web_marroquineria || true
+          
           docker run -d \
             --name web_marroquineria \
             --restart unless-stopped \
