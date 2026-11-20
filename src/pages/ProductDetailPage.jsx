@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, MessageCircle, Ruler, ShieldCheck, Sparkles } from 'lucide-react';
 import { catalogService, formatCOP } from '../services/api';
 
-const WHATSAPP_NUMBER = '573000000000'; // Reemplaza con tu número real con indicativo 57
+const WHATSAPP_NUMBER = '573214450521'; // Reemplaza con tu número real con indicativo 57
 
 export default function ProductDetailPage() {
   const { slug } = useParams();
