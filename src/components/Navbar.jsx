@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
-import { ShoppingBag } from 'lucide-react';
 
 export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-inner">
         <Link to="/" className="brand-logo">
-          <ShoppingBag size={22} className="brand-icon" />
+          <img
+            src="/logo.png"
+            alt="Logo Marroquinería Gómez"
+            className="brand-logo-img"
+          />
           <span>Marroquinería Gómez</span>
         </Link>
 

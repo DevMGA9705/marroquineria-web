@@ -496,3 +496,12 @@
     text-align: center;
   }
 }
+
+.brand-logo-img {
+  height: 44px;
+  width: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: #000000;
+}
