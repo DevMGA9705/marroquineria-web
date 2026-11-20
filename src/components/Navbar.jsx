@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="navbar-inner">
         <Link to="/" className="brand-logo">
           <img
-            src="/logo.png"
+            src="/logo.jpg"
             alt="Logo Marroquinería Gómez"
             className="brand-logo-img"
           />
