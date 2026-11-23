@@ -41,7 +41,7 @@ const ANNOUNCEMENTS = [
 
 export default function AnnouncementsPage() {
     const whatsappUrl =
-        'https://wa.me/573000000000?text=' +
+        'https://wa.me/573214450521?text=' +
         encodeURIComponent('Hola, vengo de la web de Marroquinería Gómez y quisiera más información.');
 
     return (
