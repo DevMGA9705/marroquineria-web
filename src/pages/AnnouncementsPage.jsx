@@ -35,7 +35,7 @@ const ANNOUNCEMENTS = [
         description:
             'Renovamos y tapizamos salas, poltronas, sillas de comedor, cabeceros y mobiliario de oficina en cuero legítimo de alta resistencia, con acabados finos y costuras de precisión.',
         highlight: 'Acabados duraderos y selección de tonos',
-        icon: Sofa,
+        icon: Award,
     },
 ];
 
