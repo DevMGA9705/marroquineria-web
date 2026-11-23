@@ -29,16 +29,6 @@
   color: var(--accent);
 }
 
-.nav-links a {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  transition: color 0.2s;
-}
-
-.nav-links a:hover {
-  color: var(--accent);
-}
-
 .page-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -737,13 +727,13 @@
   filter: grayscale(100%) invert(90%) contrast(115%);
 }
 
-.navbar-links {
+.nav-links {
   display: flex;
   align-items: center;
   gap: 1.75rem;
 }
 
-.nav-link {
+.nav-links a {
   color: #b5b5b5;
   text-decoration: none;
   font-size: 0.95rem;
@@ -753,10 +743,8 @@
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: #c89b54;
   border-bottom-color: #c89b54;
 }
-
-

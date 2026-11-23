@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   return (
@@ -14,13 +14,15 @@ export default function Navbar() {
         </Link>
 
         <nav className="nav-links">
-          <Link to="/">Catálogo</Link>
-          <Link to="/novedades" className="text-neutral-300 hover:text-[#C89B54] transition-colors">
+          <NavLink to="/" end>
+            Catálogo
+          </NavLink>
+          <NavLink to="/novedades">
             Novedades
-          </Link>
-          <Link to="/ubicacion" className="text-neutral-300 hover:text-[#C89B54] transition-colors">
+          </NavLink>
+          <NavLink to="/ubicacion">
             Ubicación
-          </Link>
+          </NavLink>
         </nav>
       </div>
     </header>
