@@ -505,3 +505,258 @@
   border: 1px solid var(--border-color);
   background-color: #000000;
 }
+
+.info-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  color: #ffffff;
+}
+
+.info-header {
+  margin-bottom: 2.5rem;
+}
+
+.info-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c89b54;
+}
+
+.info-title {
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-weight: 700;
+  margin: 0.4rem 0 0.65rem;
+  color: #ffffff;
+}
+
+.info-subtitle {
+  color: #a3a3a3;
+  max-width: 650px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Cuadrícula de Novedades / Anuncios */
+.announcements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.announcement-card {
+  background: #181818;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.announcement-card:hover {
+  border-color: rgba(200, 155, 84, 0.55);
+  transform: translateY(-2px);
+}
+
+.announcement-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.announcement-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(200, 155, 84, 0.14);
+  color: #c89b54;
+  border: 1px solid rgba(200, 155, 84, 0.32);
+}
+
+.announcement-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #121212;
+  border: 1px solid #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c89b54;
+  flex-shrink: 0;
+}
+
+.announcement-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.65rem;
+  color: #ffffff;
+}
+
+.announcement-card-desc {
+  font-size: 0.94rem;
+  color: #b5b5b5;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.announcement-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #262626;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #c89b54;
+}
+
+/* Banner inferior WhatsApp */
+.cta-banner {
+  margin-top: 2.5rem;
+  background: #181818;
+  border: 1px solid rgba(200, 155, 84, 0.35);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.cta-banner h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+.cta-banner p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #a3a3a3;
+}
+
+.gold-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  background: #c89b54;
+  color: #111111;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.8rem 1.35rem;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.gold-btn:hover {
+  background: #b58943;
+}
+
+/* Sección Ubicación */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+@media (max-width: 860px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.location-card {
+  background: #181818;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+
+.location-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.location-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.location-item-icon {
+  color: #c89b54;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.location-item h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.location-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #a3a3a3;
+  line-height: 1.55;
+}
+
+.location-map-box {
+  background: #181818;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 380px;
+}
+
+.location-map-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border: 0;
+  filter: grayscale(100%) invert(90%) contrast(115%);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-link {
+  color: #b5b5b5;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #c89b54;
+  border-bottom-color: #c89b54;
+}
+
+

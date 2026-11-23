@@ -41,65 +41,46 @@ const ANNOUNCEMENTS = [
 
 export default function AnnouncementsPage() {
   const whatsappUrl =
-    'https://wa.me/573214450521?text=' +
+    'https://wa.me/573000000000?text=' +
     encodeURIComponent('Hola, vengo de la web de Marroquinería Gómez y quisiera más información.');
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12 text-white">
-      <div className="mb-10">
-        <span className="text-xs font-bold tracking-widest uppercase text-[#C89B54]">
-          Taller &amp; Servicios
-        </span>
-        <h1 className="text-3xl md:text-4xl font-bold mt-1">
-          Novedades y Servicios Especiales
-        </h1>
-        <p className="text-neutral-400 mt-2 max-w-2xl">
+    <section className="info-page">
+      <div className="info-header">
+        <span className="info-eyebrow">Taller &amp; Servicios</span>
+        <h1 className="info-title">Novedades y Servicios Especiales</h1>
+        <p className="info-subtitle">
           Conoce los servicios adicionales, beneficios y detalles detrás de cada pieza elaborada en Marroquinería Gómez.
         </p>
       </div>
 
-      {/* Cuadrícula de anuncios visuales */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="announcements-grid">
         {ANNOUNCEMENTS.map((item) => {
           const Icon = item.icon;
           return (
-            <article
-              key={item.id}
-              className="bg-[#181818] border border-neutral-800 hover:border-[#C89B54]/50 rounded-2xl p-6 transition-colors flex flex-col justify-between"
-            >
+            <article key={item.id} className="announcement-card">
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#C89B54]/15 text-[#C89B54] border border-[#C89B54]/30">
-                    {item.tag}
-                  </span>
-                  <div className="w-10 h-10 rounded-xl bg-neutral-900 border border-neutral-800 flex items-center justify-center text-[#C89B54]">
-                    <Icon className="w-5 h-5" />
+                <div className="announcement-top">
+                  <span className="announcement-badge">{item.tag}</span>
+                  <div className="announcement-icon-box">
+                    <Icon size={20} />
                   </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-white mb-2">{item.title}</h2>
-                <p className="text-sm text-neutral-300 leading-relaxed">
-                  {item.description}
-                </p>
+                <h2 className="announcement-card-title">{item.title}</h2>
+                <p className="announcement-card-desc">{item.description}</p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-neutral-800/80 flex items-center justify-between">
-                <span className="text-xs font-medium text-[#C89B54]">
-                  {item.highlight}
-                </span>
-              </div>
+              <div className="announcement-footer">{item.highlight}</div>
             </article>
           );
         })}
       </div>
 
-      {/* Banner inferior de contacto */}
-      <div className="mt-10 bg-[#181818] border border-[#C89B54]/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div className="cta-banner">
         <div>
-          <h3 className="text-lg font-bold text-white">
-            ¿Buscas un diseño o medida especial?
-          </h3>
-          <p className="text-sm text-neutral-400 mt-1">
+          <h3>¿Buscas un diseño o medida especial?</h3>
+          <p>
             Escríbenos directamente y te asesoramos sobre colores, tipos de cuero y tiempos de entrega.
           </p>
         </div>
@@ -108,9 +89,9 @@ export default function AnnouncementsPage() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#C89B54] hover:bg-[#b58943] text-[#111111] font-bold px-5 py-3 rounded-xl transition-colors shrink-0"
+          className="gold-btn"
         >
-          <MessageCircle className="w-4 h-4" />
+          <MessageCircle size={18} />
           Consultar por WhatsApp
         </a>
       </div>

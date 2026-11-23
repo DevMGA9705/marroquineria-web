@@ -7,50 +7,42 @@ export default function LocationPage() {
     'https://www.google.com/maps/search/?api=1&query=Manizales+Caldas+Colombia';
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-12 text-white">
-      <div className="mb-8">
-        <span className="text-xs font-bold tracking-widest uppercase text-[#C89B54]">
-          Visítanos
-        </span>
-        <h1 className="text-3xl md:text-4xl font-bold mt-1">
-          Nuestro Taller en Manizales
-        </h1>
-        <p className="text-neutral-400 mt-2 max-w-2xl">
+    <section className="info-page">
+      <div className="info-header">
+        <span className="info-eyebrow">Visítanos</span>
+        <h1 className="info-title">Nuestro Taller en Manizales</h1>
+        <p className="info-subtitle">
           Conoce de cerca nuestro trabajo artesanal en cuero legítimo, personaliza tus artículos o recoge tus pedidos directamente.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
-        <div className="lg:col-span-2 bg-[#181818] border border-neutral-800 rounded-2xl p-6 flex flex-col justify-between space-y-6">
-          <div className="space-y-5">
-            <div className="flex items-start gap-3.5">
-              <MapPin className="w-5 h-5 text-[#C89B54] shrink-0 mt-1" />
+      <div className="location-grid">
+        <div className="location-card">
+          <div className="location-items">
+            <div className="location-item">
+              <MapPin size={20} className="location-item-icon" />
               <div>
-                <h3 className="font-semibold text-white">Ubicación</h3>
-                <p className="text-sm text-neutral-400 mt-0.5">
-                  Manizales, Caldas, Colombia
-                </p>
+                <h3>Ubicación</h3>
+                <p>Manizales, Caldas, Colombia</p>
               </div>
             </div>
 
-            <div className="flex items-start gap-3.5">
-              <Clock className="w-5 h-5 text-[#C89B54] shrink-0 mt-1" />
+            <div className="location-item">
+              <Clock size={20} className="location-item-icon" />
               <div>
-                <h3 className="font-semibold text-white">Horario de Atención</h3>
-                <p className="text-sm text-neutral-400 mt-0.5">
+                <h3>Horario de Atención</h3>
+                <p>
                   Lunes a Viernes: 8:30 a.m. – 6:00 p.m.<br />
                   Sábados: 9:00 a.m. – 2:00 p.m.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-3.5">
-              <Phone className="w-5 h-5 text-[#C89B54] shrink-0 mt-1" />
+            <div className="location-item">
+              <Phone size={20} className="location-item-icon" />
               <div>
-                <h3 className="font-semibold text-white">Atención Directa</h3>
-                <p className="text-sm text-neutral-400 mt-0.5">
-                  Escríbenos por WhatsApp para coordinar entrega o visita al taller.
-                </p>
+                <h3>Atención Directa</h3>
+                <p>Escríbenos por WhatsApp para coordinar entrega o visita al taller.</p>
               </div>
             </div>
           </div>
@@ -59,18 +51,18 @@ export default function LocationPage() {
             href={googleMapsRouteUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full inline-flex items-center justify-center gap-2 bg-[#C89B54] hover:bg-[#b58943] text-[#111111] font-bold py-3 px-4 rounded-xl transition-colors"
+            className="gold-btn"
           >
-            <Navigation className="w-4 h-4" />
+            <Navigation size={18} />
             Abrir en Google Maps
           </a>
         </div>
 
-        <div className="lg:col-span-3 bg-[#181818] border border-neutral-800 rounded-2xl overflow-hidden min-h-[360px]">
+        <div className="location-map-box">
           <iframe
             title="Ubicación Taller Marroquinería Gómez"
             src={mapsEmbedUrl}
-            className="w-full h-full min-h-[360px] border-0 grayscale contrast-125 invert-[90%]"
+            className="location-map-iframe"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
