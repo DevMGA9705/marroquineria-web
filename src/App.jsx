@@ -3,6 +3,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CatalogPage from './pages/CatalogPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import AnnouncementsPage from './pages/AnnouncementsPage';
+import LocationPage from './pages/LocationPage';
 import './App.css';
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<CatalogPage />} />
             <Route path="/producto/:slug" element={<ProductDetailPage />} />
+            <Route path="/novedades" element={<AnnouncementsPage />} />
+            <Route path="/ubicacion" element={<LocationPage />} />
           </Routes>
         </main>
         <Footer />

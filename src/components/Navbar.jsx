@@ -15,6 +15,12 @@ export default function Navbar() {
 
         <nav className="nav-links">
           <Link to="/">Catálogo</Link>
+          <Link to="/novedades" className="text-neutral-300 hover:text-[#C89B54] transition-colors">
+            Novedades
+          </Link>
+          <Link to="/ubicacion" className="text-neutral-300 hover:text-[#C89B54] transition-colors">
+            Ubicación
+          </Link>
         </nav>
       </div>
     </header>
